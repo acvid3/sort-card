@@ -1,4 +1,6 @@
 ._class {
+    position: relative;
+    height: 470px;
     margin: 5px auto;
     padding: 5px;
     background: #fff;
@@ -6,7 +8,8 @@
 }
 
 ._class_scrolbox {
-    width: 110px;
-    padding-right: 10px;
+    height: 100%;
     overflow-y: scroll;
+    display: flex;
+    flex-flow: wrap;
 }

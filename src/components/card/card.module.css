@@ -1,7 +1,30 @@
 ._class {
-    height: 320px;
-    width: 25%;
+    position: relative;
+    height: 220px;
+    width: 140px;
+    margin: 5px;
     border: 1px solid #3387d6;
     border-radius: 10px;
     display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+    color: #3387d6;
+}
+
+._class:hover {
+    background: #d6e2ec;
+}
+
+._class_p {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+
+._class_s {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;
 }
