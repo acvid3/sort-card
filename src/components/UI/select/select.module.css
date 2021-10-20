@@ -1,0 +1,8 @@
+._class {
+    height: 30px;
+    width: 120px;
+    color: #3387d6;
+    border: 1px solid #3387d6;
+    outline: none;
+    user-select: none;
+}
