@@ -46,7 +46,7 @@ const PageCards = () => {
                     {value: 'title', name: 'Title'}
                 ]}
             />
-
+            <p>{'sort: ' + sortSelected}</p>
             <Group>
                 {cards.map(card => {
                     return <Card 

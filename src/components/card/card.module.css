@@ -3,16 +3,17 @@
     height: 220px;
     width: 140px;
     margin: 5px;
-    border: 1px solid #3387d6;
+    background: rgba(255, 255, 255, 0.226);
+    backdrop-filter: blur(30px);
     border-radius: 10px;
     display: inline-block;
     cursor: pointer;
     transition: .5s;
-    color: #3387d6;
+    color: #ffffff;
 }
 
 ._class:hover {
-    background: #d6e2ec;
+    background: #660074;
 }
 
 ._class_p {
