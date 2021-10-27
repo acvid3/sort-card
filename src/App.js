@@ -1,13 +1,11 @@
 import React from "react";
-import PageCards from "./pages/pageCards/pageCards";
+import PageCards from "./pageCards";
 
 function App() {
   return (
-    <>
-      <div className="App">
-          <PageCards></PageCards>
-      </div>
-    </>
+    <div className="App">
+      <PageCards />
+    </div>
   );
 }
 

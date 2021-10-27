@@ -1,8 +1,14 @@
 ._class {
     height: 30px;
     width: 120px;
-    color: #3387d6;
-    border: 1px solid #3387d6;
+    color: #990036;
+    border: none;
+    background: transparent;
     outline: none;
     user-select: none;
+    cursor: pointer;
+}
+
+.__class {
+    padding: 10px 0;
 }

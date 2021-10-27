@@ -1,14 +1,5 @@
 ._class {
     position: relative;
-    height: 470px;
     margin: 5px auto;
     padding: 5px;
-    overflow: hidden;
-}
-
-._class_scrolbox {
-    height: 100%;
-    overflow-y: scroll;
-    display: flex;
-    flex-flow: wrap;
 }

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Card from '../../components/card/card';
-import Group from '../../components/group/group';
-import Select from '../../components/UI/select/select';
+import Card from './components/card/card';
+import Group from './components/group/group';
+import Select from './components/UI/select/select';
 import {_class} from './pageCards.module.css';
+import {getCards}  from './api/apiCards';
 
 const ASC = 'Asc';
 const DESC = 'Desc';
@@ -11,12 +12,10 @@ const PageCards = () => {
     const [cards, setCards] = useState([]);
     const [sortSelected, setSortSelected] = useState('');
 
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/photos?_limit=20')
-        .then(response => response.json())
-        .then(json => setCards(json));
+    useEffect(async () => {
+        const response = await getCards();
+        setCards(response)
     }, []);
-
    
     const sotrCard = (value) => {
         setSortSelected(value);

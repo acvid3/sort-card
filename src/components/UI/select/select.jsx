@@ -1,5 +1,5 @@
 import React from 'react';
-import {_class} from './select.module.css';
+import {_class, __class} from './select.module.css';
 
 const Select = ({options, defaultValue, value, onChange}) => {
     return (
@@ -14,7 +14,7 @@ const Select = ({options, defaultValue, value, onChange}) => {
 
             {options.map(option => {
                 return <option 
-                    className={_class}
+                    className={__class}
                     value={option.value} 
                     key={option.value}
                 >
