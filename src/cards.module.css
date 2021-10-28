@@ -5,5 +5,12 @@
 }
 
 .__class {
+    height: 70px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--container-color);
     color: var(--color-text);
 }

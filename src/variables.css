@@ -1,8 +1,9 @@
 :root {
     --color-text: #fff;
     --body-color: hsl(30, 8%, 8%);
-    --container-color: hsl(30, 8%, 10%); 
+    --container-color: hsl(30, 8%, 20%); 
     --container-color-opacity: rgba(73, 72, 70, 0.7); 
     --hover-color: hsl(25, 8%, 15%);
     --body-blur: blur(5px);
+    --border-radius: 5px;
 }

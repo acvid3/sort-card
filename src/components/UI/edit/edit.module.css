@@ -2,7 +2,7 @@
     outline: none;
     border: none;
     padding: 0 10px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background: var(--container-color);
     color: var(--color-text);
 }

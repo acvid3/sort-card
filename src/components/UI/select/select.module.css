@@ -2,7 +2,7 @@
     /* Default styles */
     height: 30px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     /* Font styles */
     text-transform: uppercase;

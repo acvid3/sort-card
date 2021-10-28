@@ -39,7 +39,7 @@ const PageCards = () => {
                         />
                     })
                     :
-                    <p className={__class}>There were no cards matched the search!</p>
+                    <div className={__class}>There were no cards matched the search!</div>
                 }
             </Group> 
         </div>
