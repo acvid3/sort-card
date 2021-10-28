@@ -4,10 +4,13 @@ import PageCards from "./pageCards";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Nav />
-      <PageCards />
-    </div>
+      
+      <div className="App">
+        <PageCards />
+      </div>
+    </>
   );
 }
 

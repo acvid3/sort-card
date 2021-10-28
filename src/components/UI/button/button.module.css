@@ -1,0 +1,15 @@
+._class {
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color: var(--colot-text);
+    background: var(--container-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+._class:hover {
+    background: var(--container-color-opacity);
+    color: crimson;
+    border-bottom: 1px solid crimson;
+}

@@ -1,8 +1,19 @@
 @import url(../../cssVariables.css);
 
 ._class {
-    height: 100px;
-    display: grid;
-    grid-template-columns: 2rem 1fr;
+    position: fixed;
+    height: 50px;
+    width: 100vw;
     color: var(--colot-text);
+    z-index: 1;
+    transition: .2s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+
+._class_active {
+    background: var(--container-color-opacity);
+    backdrop-filter: var(--body-blur);
 }

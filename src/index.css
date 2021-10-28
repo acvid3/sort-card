@@ -26,10 +26,7 @@ code {
 }
 
 .App {
-  height: 100vh;
+  position: relative;
   width: 768px;
-  display: grid;
-  grid-template-rows: 100px auto;
-  grid-gap: 10px;
 }
 

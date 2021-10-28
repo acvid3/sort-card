@@ -16,10 +16,10 @@
     align-items: center;
     grid-gap: 6px;
     /* color style */
-    background: rgba(255, 255, 255, 0.308);
-    backdrop-filter: blur(50px);
+    background: var(--container-color);
     cursor: pointer;
     transition: .5s;
+    user-select: none;
 }
 
 ._class:hover {
@@ -28,8 +28,11 @@
 
 .__class {
     color: #fff;
+    width: 100%;
+    display: grid;
+    justify-content: center;
 }
 
 .__class:hover {
-    color: #d10069;
+    color: crimson;
 }
