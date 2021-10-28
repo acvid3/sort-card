@@ -1,0 +1,6 @@
+._class {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px;
+    grid-gap: 5px;
+}

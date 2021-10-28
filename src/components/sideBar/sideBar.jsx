@@ -1,18 +1,20 @@
 import React from 'react';
+import {_class} from './sideBar.module.css';
 import Select from '../UI/select/select';
+import Edit from '../UI/edit/edit';
 import { sort } from '../../sortCards';
 import { useCards } from '../../useCards';
 
-const SideBar = () => {
-    const accessor = useCards();
+const SideBar = ({setSortCards}) => {
+    const [cards] = useCards();
     
     const sotrCard = (value) => {
-        console.log(sort(accessor.cards, value));
-        accessor.setCards(sort(accessor.cards, value)); 
+        setSortCards(sort(cards, value)); 
     } 
 
     return (
-        <div>
+        <div className={_class}>
+           <Edit placeholder="Search card" />
            <Select 
                 onChange={sotrCard}
                 options={[

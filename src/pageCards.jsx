@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Card from './components/card/card';
 import Group from './components/group/group';
 import {_class} from './pageCards.module.css';
@@ -6,14 +6,17 @@ import SideBar from './components/sideBar/sideBar';
 import { useCards } from './useCards';
 
 const PageCards = () => {
-    const accessor = useCards();
+    const [cards, setCards] = useCards();
+
+    const getResultSortedCard = value => {
+        setCards(value);
+    }
 
     return (
         <div className={_class}>
-           <SideBar />
-           
+           <SideBar setSortCards={getResultSortedCard}/>
             <Group>
-                {accessor.cards.map(card => {
+                {cards.map(card => {
                     return <Card 
                         key={card.id} 
                         id={card.id}

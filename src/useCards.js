@@ -12,10 +12,8 @@ export const useCards = () => {
         getRequest();
     }, []);
 
-    const accessor = () => {
-        return {cards, setCards}
-    }
+   
 
 
-    return accessor();
+    return [cards, setCards];
 }
