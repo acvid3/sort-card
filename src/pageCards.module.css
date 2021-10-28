@@ -1,5 +1,6 @@
 ._class {
-    height: 100vh;
-    width: 808px;
+    width: 785px;
     overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }

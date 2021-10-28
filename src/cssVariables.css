@@ -1,0 +1,5 @@
+:root {
+    --colot-text: #fff;
+    --body-color: linear-gradient(160deg, rgba(255, 0, 242, 0.5), transparent);
+    --body-blur: blur(5px);
+}

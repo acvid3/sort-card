@@ -1,0 +1,8 @@
+@import url(../../cssVariables.css);
+
+._class {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    color: var(--colot-text);
+}

@@ -4,48 +4,35 @@ import Group from './components/group/group';
 import Select from './components/UI/select/select';
 import {_class} from './pageCards.module.css';
 import {getCards}  from './api/apiCards';
-
-const ASC = 'Asc';
-const DESC = 'Desc';
+import { sort } from './sortCards';
 
 const PageCards = () => {
     const [cards, setCards] = useState([]);
-    const [sortSelected, setSortSelected] = useState('');
 
-    useEffect(async () => {
-        const response = await getCards();
-        setCards(response)
+    const getRequest = async () => {
+        setCards(await getCards());
+    }
+
+    useEffect(() => {
+        getRequest();
     }, []);
-   
-    const sotrCard = (value) => {
-        setSortSelected(value);
-      
-        switch (value) {
-            case ASC: setCards([...cards].sort((a, b) => {return a.id - b.id})) 
-            break;
-            case DESC: setCards([...cards].sort((a, b) => {return b.id - a.id})) 
-            break;
-            case 'title': setCards([...cards].sort((a, b) => a[value].localeCompare(b[value]))) 
-            break;
-            default: setCards([...cards].sort((a, b) => {return a.id - b.id})) 
-            break;
-        }
 
-        
+    const sotrCard = (value) => {
+        setCards(sort(cards, value)); 
     } 
+
     return (
         <div className={_class}>
-            <Select 
-                value={sortSelected}
+           <Select 
                 onChange={sotrCard}
-                defaultValue='deafault'
                 options={[
-                    {value: ASC, name: ASC},
-                    {value: DESC, name: DESC},
-                    {value: 'title', name: 'Title'}
+                    {value: 'default', name: 'default'},
+                    {value: 'asc', name: 'asc'},
+                    {value: 'desc', name: 'desc'},
+                    {value: 'title', name: 'title'}
                 ]}
             />
-            <p>{'sort: ' + sortSelected}</p>
+           
             <Group>
                 {cards.map(card => {
                     return <Card 

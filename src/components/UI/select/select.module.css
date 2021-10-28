@@ -1,14 +1,35 @@
 ._class {
+    /* Default styles */
     height: 30px;
-    width: 120px;
-    color: #990036;
-    border: none;
-    background: transparent;
-    outline: none;
-    user-select: none;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Font styles */
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    /* Grid styles */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 6px;
+    /* color style */
+    background: rgba(255, 255, 255, 0.308);
+    backdrop-filter: blur(50px);
     cursor: pointer;
+    transition: .5s;
+}
+
+._class:hover {
+    height: 140px;
 }
 
 .__class {
-    padding: 10px 0;
+    color: #fff;
+}
+
+.__class:hover {
+    color: #d10069;
 }

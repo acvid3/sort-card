@@ -1,27 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {_class, __class} from './select.module.css';
 
-const Select = ({options, defaultValue, value, onChange}) => {
+const Select = ({options, onChange}) => {
+    const [value, setValue] = useState('');
+
     return (
-        <select
-            className={_class}
-            value={value}
-            onChange={e => onChange(e.target.value)}
-        >
-            <option value=''>
-                {defaultValue}
-            </option>
+        <div className={_class}>
+            <div className={__class}>{value ? value : 'Default'}</div>
 
             {options.map(option => {
-                return <option 
-                    className={__class}
-                    value={option.value} 
-                    key={option.value}
-                >
-                    {option.name}
-                </option>
+                return <div key={option.value} className={__class} onClick={() => {
+                    setValue(option.value);
+                    onChange(option.value);
+                }}>{option.name}</div>
             })}
-        </select>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 ._class {
-    position: relative;
-    margin: 5px auto;
-    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    justify-items: center;
 }
