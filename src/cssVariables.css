@@ -1,5 +1,7 @@
 :root {
     --colot-text: #fff;
-    --body-color: linear-gradient(160deg, rgba(255, 0, 242, 0.5), transparent);
+    --body-color: hsl(30, 8%, 8%);
+    --container-color: hsl(30, 8%, 10%); 
+    --hover-color: hsl(25, 8%, 15%);
     --body-blur: blur(5px);
 }

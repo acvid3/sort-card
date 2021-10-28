@@ -1,40 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import Card from './components/card/card';
 import Group from './components/group/group';
-import Select from './components/UI/select/select';
 import {_class} from './pageCards.module.css';
-import {getCards}  from './api/apiCards';
-import { sort } from './sortCards';
+import SideBar from './components/sideBar/sideBar';
+import { useCards } from './useCards';
 
 const PageCards = () => {
-    const [cards, setCards] = useState([]);
-
-    const getRequest = async () => {
-        setCards(await getCards());
-    }
-
-    useEffect(() => {
-        getRequest();
-    }, []);
-
-    const sotrCard = (value) => {
-        setCards(sort(cards, value)); 
-    } 
+    const accessor = useCards();
 
     return (
         <div className={_class}>
-           <Select 
-                onChange={sotrCard}
-                options={[
-                    {value: 'default', name: 'default'},
-                    {value: 'asc', name: 'asc'},
-                    {value: 'desc', name: 'desc'},
-                    {value: 'title', name: 'title'}
-                ]}
-            />
+           <SideBar />
            
             <Group>
-                {cards.map(card => {
+                {accessor.cards.map(card => {
                     return <Card 
                         key={card.id} 
                         id={card.id}
