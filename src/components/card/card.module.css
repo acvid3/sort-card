@@ -9,7 +9,7 @@
     justify-items: center;
     cursor: pointer;
     transition: .5s;
-    color: var(--colot-text);
+    color: var(--color-text);
 }
 
 ._class:hover {

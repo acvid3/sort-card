@@ -2,7 +2,7 @@
     position: fixed;
     height: 50px;
     width: 100vw;
-    color: var(--colot-text);
+    color: var(--color-text);
     z-index: 1;
     transition: .2s;
     display: flex;

@@ -1,5 +1,5 @@
 ._class {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     background: var(--container-color-opacity);
@@ -20,6 +20,6 @@
     grid-gap: 5px;
     justify-items: center;
     align-items: center;
-    color: var(--colot-text);
+    color: var(--color-text);
     background: var(--container-color);
 }

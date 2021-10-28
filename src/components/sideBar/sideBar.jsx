@@ -5,7 +5,7 @@ import Edit from '../UI/edit/edit';
 import { sort } from '../../sortCards';
 import { useCards } from '../../useCards';
 
-const SideBar = ({setSortCards}) => {
+const SideBar = ({setSortCards, query, queryValue}) => {
     const [cards] = useCards();
     
     const sotrCard = (value) => {
@@ -14,7 +14,11 @@ const SideBar = ({setSortCards}) => {
 
     return (
         <div className={_class}>
-           <Edit placeholder="Search card" />
+           <Edit 
+               placeholder="Search card" 
+               value={queryValue}
+               onChange={e => query(e.target.value)}
+           />
            <Select 
                 onChange={sotrCard}
                 options={[

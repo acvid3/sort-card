@@ -27,7 +27,7 @@
 }
 
 .__class {
-    color: #fff;
+    color: var(--color-text);
     width: 100%;
     display: grid;
     justify-content: center;

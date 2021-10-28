@@ -3,3 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+
+.__class {
+    color: var(--color-text);
+}
