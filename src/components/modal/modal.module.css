@@ -1,0 +1,25 @@
+._class {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: var(--container-color-opacity);
+    backdrop-filter: var(--body-blur);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.__class {
+    height: 300px;
+    width: 600px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    color: var(--colot-text);
+    background: var(--container-color);
+}

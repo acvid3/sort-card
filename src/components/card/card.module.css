@@ -16,7 +16,9 @@
     background: var(--hover-color);
 }
 
-._class_s {
+._class_button {
     grid-column: 1/3;
+    grid-row: 3/3;
+    align-self: end;
     padding: 5px;
 }

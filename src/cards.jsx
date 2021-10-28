@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './components/card/card';
 import Group from './components/group/group';
-import {_class} from './pageCards.module.css';
+import {_class} from './cards.module.css';
 import SideBar from './components/sideBar/sideBar';
 import { useCards } from './useCards';
 
