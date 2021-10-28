@@ -3,7 +3,7 @@
 The compare function sort all the values in the array, two values at a time [a, b]. You can use my code with numerical and alphabetical sorting for experiments
 
 ```bash 
- sortCards.js
+ file path: sort-card/src/sortCards.js
 ```
 ## Install
 
