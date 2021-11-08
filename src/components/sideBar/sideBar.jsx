@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {_class} from './sideBar.module.css';
 import Select from '../UI/select/select';
 import Edit from '../UI/edit/edit';
 import { sort } from '../../sortCards';
 import { useCards } from '../../useCards';
-import PriceRange from '../priceRange/priceRange';
-import Button from './../UI/button/button';
 
 const SideBar = ({setSortCards, query, queryValue}) => {
     const [cards] = useCards();
-    const [state, setstate] = useState(200);
     
     const sotrCard = (value) => {
         setSortCards(sort(cards, value)); 
@@ -31,8 +28,6 @@ const SideBar = ({setSortCards, query, queryValue}) => {
                     {value: 'title', name: 'title'}
                 ]}
             /> 
-            <PriceRange width={state}/>
-            <Button onClick={() => setstate(state - 10)}>Go</Button>
         </div>
     )
 }
